@@ -8,6 +8,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'users',
-    
-  }
+    loadChildren: () =>
+      import('./pages/users/users.routes').then((routes) => routes.UserRoutes),
+  },
 ];
